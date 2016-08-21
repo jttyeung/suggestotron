@@ -5,5 +5,8 @@ Rails.application.routes.draw do
       post 'upvote'
       put 'downvote'
     end
+    collection do
+      get :about
+    end
   end
 end

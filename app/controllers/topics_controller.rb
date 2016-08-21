@@ -75,6 +75,10 @@ def downvote
   redirect_to(topics_path)
 end
 
+def sort
+  @topic = Topic.find(params[:id])
+  @topic.votes.all.sort
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
