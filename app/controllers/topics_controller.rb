@@ -15,6 +15,7 @@ class TopicsController < ApplicationController
   # GET /topics/new
   def new
     @topic = Topic.new
+
   end
 
   # GET /topics/1/edit
@@ -62,18 +63,19 @@ class TopicsController < ApplicationController
   end
 
 
-def upvote
-  @topic = Topic.find(params[:id])
-  @topic.votes.create
-  redirect_to(topics_path)
-end
+
+# def upvote
+#   @topic = Topic.find(params[:id])
+#   @topic.votes.create
+#   redirect_to(topics_path)
+# end
 
 
-def downvote
-  @topic = Topic.find(params[:id])
-  @topic.votes.first.destroy
-  redirect_to(topics_path)
-end
+# def downvote
+#   @topic = Topic.find(params[:id])
+#   @topic.votes.first.destroy
+#   redirect_to(topics_path)
+# end
 
 
   private
